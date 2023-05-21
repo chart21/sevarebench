@@ -1,0 +1,13 @@
+program.bit_length = 64
+
+n = 1000000
+
+a = Array(n, sbit)
+b = Array(n, sbit)
+c = Array(n, sbit)
+
+for i in range(0, n):
+    c[i] = a[i] & b[i]
+
+print_str('%s ', c[i].reveal())
+

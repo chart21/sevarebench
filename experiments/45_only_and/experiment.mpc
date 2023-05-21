@@ -1,6 +1,7 @@
 program.bit_length = 64
 
-n = 1000000
+n = int(program.args[1])
+
 
 a = Array(n, sbit)
 b = Array(n, sbit)
@@ -9,5 +10,5 @@ c = Array(n, sbit)
 for i in range(0, n):
     c[i] = a[i] & b[i]
 
-print_str('%s ', c[i].reveal())
+print_str('%s ', c[n-1].reveal())
 

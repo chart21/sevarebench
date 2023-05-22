@@ -8,9 +8,9 @@
 # supported protocols split by computational domain
 supportedFieldProtocols=( mascot lowgear highgear cowgear chaigear semi hemi 
     temi soho malicious-shamir malicious-rep-field ps-rep-field sy-rep-field 
-    shamir atlas replicated-field rep4-ring )
+    shamir atlas replicated-field )
 supportedRingProtocols=( spdz2k semi2k brain malicious-rep-ring ps-rep-ring 
-    sy-rep-ring replicated-ring )
+    sy-rep-ring replicated-ring rep4-ring )
 supportedBinaryProtocols=( tinier real-bmr semi-bin yao yaoO semi-bmr 
     malicious-rep-bin malicious-ccd ps-rep-bin mal-shamir-bmr mal-rep-bmr 
     replicated-bin ccd shamir-bmr rep-bmr )
@@ -20,7 +20,7 @@ covertdishonestProtocols=( cowgear chaigear )
 semidishonestProtocols=( semi hemi temi soho semi2k semi-bin yao yaoO semi-bmr )
 malhonestProtocols=( malicious-shamir malicious-rep-field ps-rep-field sy-rep-field 
     brain malicious-rep-ring ps-rep-ring sy-rep-ring malicious-rep-bin 
-    malicious-ccd ps-rep-bin mal-rep-bmr mal-shamir-bmr )
+    malicious-ccd ps-rep-bin mal-rep-bmr mal-shamir-bmr rep4-ring )
 semihonestProtocols=( shamir atlas replicated-field replicated-ring replicated-bin 
     ccd shamir-bmr rep-bmr )
 # currently unsupported

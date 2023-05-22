@@ -1,14 +1,28 @@
-program.bit_length = 64
-
 n = int(program.args[1])
+p = int(program.args[3])
+
+if p > 1: #distinction needed since taping always comes with overhead
+    a = Matrix(p,n,sbit)
+    b = Matrix(p,n,sbit)
+    c = Matrix(p,n,sbit)
+    def mult():
+        t = get_arg()
 
 
-a = Array(n, sbit)
-b = Array(n, sbit)
-c = Array(n, sbit)
+        for i in range(0, n):
+            c[t][i] = a[t][i] & b[t][i]
 
-for i in range(0, n):
-    c[i] = a[i] & b[i]
+        print_str('%s ', c[t][i-1].reveal())
 
-print_str('%s ', c[n-1].reveal())
+    tapes = [program.new_tape(mult) for x in range(p)]
+    thread_numbers = program.run_tapes(tapes)
+    program.join_tapes(thread_numbers)
+else:
+    a = Array(n,sbit)
+    b = Array(n,sbit)
+    c = Array(n,sbit)
 
+    for i in range(0, n):
+        c[i] = a[i] & b[i]
+
+    print_str('%s ', c[i-1].reveal())

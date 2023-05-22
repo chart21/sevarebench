@@ -8,7 +8,7 @@
 # supported protocols split by computational domain
 supportedFieldProtocols=( mascot lowgear highgear cowgear chaigear semi hemi 
     temi soho malicious-shamir malicious-rep-field ps-rep-field sy-rep-field 
-    shamir atlas replicated-field )
+    shamir atlas replicated-field rep4-ring )
 supportedRingProtocols=( spdz2k semi2k brain malicious-rep-ring ps-rep-ring 
     sy-rep-ring replicated-ring )
 supportedBinaryProtocols=( tinier real-bmr semi-bin yao yaoO semi-bmr 

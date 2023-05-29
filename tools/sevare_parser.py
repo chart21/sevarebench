@@ -211,8 +211,10 @@ for i in range(len(header)):
         if header[i] == variable_array[j]:
             index_array[j] = i
 
-    if header[i] == "runtime_internal(s)" or header[i] == "runtime(s)":  # Name from the table
+    if header[i] == "runtime_external(s)" or header[i] == "runtime(s)":  # Name from the table
         runtime_index = i
+    # if header[i] == "runtime_internal(s)" or header[i] == "runtime(s)":  # Name from the table
+    #     runtime_index = i
     elif header[i] == "protocol":  # Name from the table
         protocol_index = i
     # Sorting index

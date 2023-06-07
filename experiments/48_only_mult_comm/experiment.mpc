@@ -1,0 +1,13 @@
+n = int(program.args[1])
+
+comm_rounds = 1000
+loop_count = int(n/1000)
+a = Array(n,sint)
+b = Array(n,sint)
+c = Array(n,sint)
+
+for i in range(0,comm_rounds):
+    for j in range(0, loop_count):
+        c[j] = c[j] * b[i]
+
+print_str('%s ', c[i-1].reveal())
